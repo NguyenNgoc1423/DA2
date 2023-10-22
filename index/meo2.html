@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>meo2</title>
+    <meta charset="urf-8">
+    <link rel="stylesheet" href="/css/trangchu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/container.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/chitietsanpham.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <script src="/js/jqueryy-3.6.0.min.js"></script>
+    <script src="/js/trangchu.js"></script>
+
+
+</head>
+
+<body style="margin: 0;" onload="back()">
+    <div class="app">
+        <header class="header">
+            <div class="grid" style="color: white;">
+                <nav class="header_navbar">
+                    <ul class="header_navbar-list">
+                        <li class="header_navbar-item header_navbar-QR">
+                            Tải ứng dụng về máy
+                            <div class="QR-code">
+                                <img style="width: 100%;" src="/hinhanh/QR_code.png" alt="QR code">
+                                <div class="QR-app">
+                                    <a href="" class="down-app">
+                                        <img src="/hinhanh/app store.png" class="img-app" alt="">
+                                    </a>
+                                    <a href="" class="down-app">
+                                        <img src="/hinhanh/google.png" class="img-app" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header_navbar-item">
+                            <span style="cursor: text; ">Kết nối</span>
+
+                            <a href="" class="icon-link"><i class="fa-brands fa-facebook-messenger" style="margin-left: 15px;"></i></a>
+                            <a href="" class="icon-link"><i class="fa-brands fa-instagram" style="margin-left: 15px;"></i></a>
+                        </li>
+                    </ul>
+                    <ul class="header_navbar-list">
+                        <li id="thongbao" class="header_navbar-item" >
+                        
+                            <a class="header_navbar-item-link icon-link"  onclick="toggle()">
+                                
+                                <i class="icon fas fa-bell"></i>
+                                Thông Báo
+                            </a>
+                            <div class="header-noti" id="account">
+                                <header class="noti">
+                                    <h3
+                                        style="color: #999; margin-left: 12px; font-weight: 500; font-size: 0.9rem; cursor: text;">
+                                        Thông Báo Mới Nhận</h3>
+                                </header>
+                                <ul class="noti-list">
+                                    <li class="noti-item">
+                                        <a href="/index/ga2.html" class="noti-link">
+                                            <span><img src="/hinhanh/gà bụng to.jpg" class="noti-img" alt=""></span>
+                                            <div class="noti-info">
+                                                <span class="noti-name">Gà bụng to</span>
+                                                <span class="noti-descriotion">Mô tả gà bụng to</span>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                    <li class="noti-item">
+                                        <a href="/index/tho4.html" class="noti-link">
+                                            <span><img src="/hinhanh/thỏ lễ hội.jpg" class="noti-img" alt=""></span>
+                                            <div class="noti-info">
+                                                <span class="noti-name">Thỏ lễ hội</span>
+                                                <span class="noti-descriotion">Mô tả thỏ lễ hội</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="noti-item">
+                                        <a href="/index/meo3.html" class="noti-link">
+                                            <span><img src="/hinhanh/mèo hoàng thượng.jpg" class="noti-img" alt=""></span>
+                                            <div class="noti-info">
+                                                <span class="noti-name">Mèo hoàng thượng</span>
+                                                <span class="noti-descriotion">Mô tả mèo hoàng thượng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="footer-noti">
+                                    <a href="" class="show-all">Xem Tất Cả</a>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="header_navbar-item " style="font-weight: 500;"><span onclick="pdk()"
+                                id="noti-dk">Đăng ký</span></li>|
+                        <li class="header_navbar-item " style="font-weight: 500;"><span onclick="pdn()"
+                                id="noti-dn">Đăng nhập</span></li>
+                    </ul>
+                </nav>
+
+              
+                <div class="header-with-search">
+                    <div class="header-logo">
+                        <a href="/index/trangchu.html">
+
+                            <img src="/hinhanh/Logoo-.png" class="logo" alt="">
+                        </a>
+                    </div>
+                    <div onclick="myFunction()" class="header-search">
+                        <input id="myInput" onkeyup="filterFunction()" type="text" class="search-input" placeholder="Tìm kiếm">
+                        <button class="btn-search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="header-catch">
+                            <a href="/index/cart.html" style="text-decoration: none;">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                        <div id="myDropdown" class="dropdown-content">
+                            <div style="height: 40px; background-color:#ffffff; line-height: 40px;">
+                                <strong style="color:#323c3f; margin-left: 35px;">Sản phẩm gợi ý</strong></div>
+                            <a href="/index/chitietsanpham3.html">
+                                <div class="search-content">
+                                    <div class="search-content-img">
+                                        <img class="img-gau" src="/hinhanh/gấu koala koya.jpg" alt="ảnh gấu koala">
+                                    </div>
+                                    <div class="search-noidung" >
+                                        <span class="name-item">GẤU KOALA KOYA</span><br>
+                                        <span class="price-now" style="color: #d0021b;">200.000₫</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/index/lacda2.html">
+                                <div class="search-content">
+                                    <div class="search-content-img">
+                                        <img class="img-gau" src="/hinhanh/lac đà alpaca nhiều màu.jpg" alt="ảnh lạc đà">
+                                    </div>
+                                    <div class="search-noidung">
+                                        <span class="name-item">LẠC ĐÀ ALPACA NHIỀU MÀU </span><br>
+                                        <span class="price-now" style="color: #d0021b;">143.000₫</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/index/meo3.html">
+                                <div class="search-content">
+                                    <div class="search-content-img">
+                                        <img class="img-gau" src="/hinhanh/mèo hoàng thượng.jpg" alt="ảnh mèo hoàng thượng">
+                                    </div>
+                                    <div class="search-noidung">
+                                        <span class="name-item">MÈO HOÀNG THƯỢNG </span><br>
+                                        <span class="price-now" style="color: #d0021b;">240.000₫</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/index/soc3.html">
+                                <div class="search-content">
+                                    <div class="search-content-img">
+                                        <img class="img-gau" src="/hinhanh/sóc gối ôm.jpg" alt="sóc gối ôm"> 
+                                    </div>
+                                    <div class="search-noidung">
+                                        <span class="name-item">SÓC GỐI ÔM</span><br>
+                                        <span class="price-now" style="color: #d0021b;">240.000₫</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/index/ga1.html">
+                                <div class="search-content">
+                                    <div class="search-content-img">
+                                        <img class="img-gau" src="/hinhanh/gà baby.jpg" alt="gà baby">
+                                    </div>
+                                    <div class="search-noidung">
+                                        <span class="name-item">GÀ BABY</span><br>
+                                        <span class="price-now" style="color: #db1919;">450.000₫</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+        </header>
+        <div class="app-container">
+            <div class="grid" style="background-color: white; width: 1100px;">
+                <div style="height: 40px; background-color: #F5F5F5"></div>
+                <div class="item-over">
+                    <div class="item-over-img">
+                        <div class="over-img">
+                            <div class="img-top">
+                                <img src="/hinhanh/mèo gối ôm.jpg" alt="" class="img-sp">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="item-over-text">
+                        <div class="item-over-text1">
+                            <div class="item-over-text-name">
+                                <h3 style="color:rgba(0, 0, 0, 0.65)" class="name-sp">MÈO GỐI ÔM </h3>
+                            </div>
+                            <div class="item-over-text-rate">
+                                <div>
+                                    <span style="color:#d0011b; text-decoration: underline;">4.9</span>
+                                    <i class="fas fa-star star1"></i>
+                                    <i class="fas fa-star star1"></i>
+                                    <i class="fas fa-star star1"></i>
+                                    <i class="fas fa-star star1"></i>
+                                    <i class="fas fa-star star1"></i>
+                                </div>
+                                <div style="margin-left: 40px;">2,3k Đã Bán</div>
+
+                            </div>
+                            <div class="item-over-text-price">
+                                <div class="item-over-text-price-over">
+
+                                    <div class="item-over-text-price-old">
+                                        <span
+                                            style="  color: rgba(0, 0, 0, 0.5); font-size: 1rem; text-decoration: line-through;"
+                                            class="old-price">270.000₫</span>
+                                    </div>
+                                    <div class="item-over-text-price-new">
+                                        <div>
+                                            <span style="color: #d0011b; font-size: 1.5rem;"
+                                                class="new-price">143.000₫</span>
+                                        </div>
+                                        <div class="item-over-text-price-percent">
+                                            <span style="font-size: 0.7rem; font-weight: 600; padding-left: 3px;"
+                                                class="percent">15% GIẢM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="SLSP">
+                                <!-- <p style="color: rgba(0, 0, 0, 0.5); font-size: 0.95rem;">Số Lượng</p> -->
+                                <div class="btn_SLSP">
+                                    <!-- <button class="p-btn minus">
+
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <input type="text" value="1" class="input-slsp soluong">
+                                    <button class="p-btn plus">
+                                        <i class="fas fa-plus"></i>
+                                    </button> -->
+                                </div>
+                            </div>
+                            <div class="item-over-text-cart">
+
+                                <div style="margin-top: 15px">
+                                    <div class="item-over-text-cart-over">
+                                        <button
+                                            onclick="addToCart({id:'07',image:'/hinhanh/mèo gối ôm.jpg', price:143.000, name:'MÈO GỐI ÔM '})"
+                                            class="btn item-over-text-cart-left"
+                                            style="width: 182px;height: 46px;  border: 1px solid #d0011b; color:#d0011b;">
+
+                                            <i class="fas fa-shopping-cart" style="font-size: 1rem;color:red; "></i>
+                                            Thêm Vào Giỏ Hàng
+                                        </button>
+                                        <a href="/index/cart.html">
+
+                                            <button
+                                                onclick="addToCart({id:'07',image:'/hinhanh/mèo gối ôm.jpg', price:143.000, name:'MÈO GỐI ÔM '})"
+                                                style="width: 182px;height: 46px;  border: 1px solid #d0011b;"
+                                                class="btn item-over-text-cart-right">
+                                                Mua Ngay
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-over-text-share">
+                                <div>
+                                    Chia Sẻ:
+                                    <a href="" style="text-decoration: none;">
+                                        <i class="fab fa-facebook-messenger"></i>
+                                    </a>
+                                    <a href="" style="text-decoration: none;">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="" style="text-decoration: none;">
+                                        <i class="fab fa-discord"></i>
+                                    </a>
+                                    <a href="" style="text-decoration: none;">
+                                        <i class="fab fa-twitter-square"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="height: 20px; background-color: #f2f2f2"></div>
+                <div class="describe">
+                    <div class="chi-tiet">
+
+                        <div
+                            style="background-color: #ece9e9; height:3rem; width: 70%; padding-left: 2rem; display: flex;">
+                            <h3 style="font-weight: 500; ">CHI TIẾT SẢN PHẨM</h3>
+                        </div>
+                        <div style="margin-left: 2rem;">
+
+                            <div class="danh-muc">
+                                <label style="width: 6rem; color: rgba(14, 12, 12, 0.989);">Thương hiệu : </label>
+                                <div style="font-size: 0.9rem; padding-left: 4rem;">Thú bông cao cấp</div>
+                            </div>
+                            <div class="danh-muc">
+                                <label style="width: 6rem; color: rgba(14, 12, 12, 0.963);">Chất liệu : </label>
+                                <div style="font-size: 0.9rem; padding-left: 4rem;">Vải lông</div>
+                            </div>
+                            <div class="danh-muc">
+                                <label style="width: 6rem; color: rgb(14, 12, 12);">Xuất xứ : </label>
+                                <div style="font-size: 0.9rem; padding-left: 4rem;">Việt Nam</div>
+                            </div>
+                            <div class="danh-muc">
+                                <label style="width: 6rem; color: rgb(14, 12, 12);">Kho hàng : </label>
+                                <div style="font-size: 0.9rem; padding-left: 4rem;">134</div>
+                            </div>
+                            <div class="danh-muc">
+                                <label style="width: 6rem; color: rgb(14, 12, 12);">Gửi từ : </label>
+                                <div style="font-size: 0.9rem; padding-left: 4rem;">Cầu Giấy, Hà Nội</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div
+                                style="background-color: #F5F5F5; height:3rem; width: 70%; padding-left: 2rem; display: flex; margin-top: 1rem;">
+                                <h3 style="font-weight: 500; ">Mô Tả Sản Phẩm</h3>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mo-ta" style="padding: 1.5rem 0 0 4rem;width: 60%;">
+                        <p style="line-height: 1.8rem; color: rgba(0,0,0,.8); font-size: 0.9rem;"></span>
+                            Mèo bông mặt bự được tạo ra như một mô hình bông, có kích thước lớn hơn so với một con mèo thực sự. Với một mặt tròn và béo, nó có vẻ như một con mèo hơi béo, nhưng vẫn rất đáng yêu và dễ thương. Nhiều người sử dụng mèo bông mặt bự làm đồ chơi hoặc đồ trang trí, bởi vì nó có vẻ đáng yêu và hài hước.Mèo gối ôm có hình dáng giống như một con mèo với đôi tai, mũi, miệng và cặp mắt to tròn đáng yêu. Điểm khác biệt của mèo gối ôm so với các sản phẩm khác là nó có kích thước lớn hơn, thường có chiều dài từ 30-50cm, và được thiết kế để có thể ôm vào và nằm trên đó như một chiếc gối êm ái.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="grid">
+                <div class="grid-row grid-row-footer">
+                    <div class="grid-column-2-4">
+                        <h3 class="footer-heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-list-item">
+
+                                <a href="" class="footer-list-item-link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">MN-Shop Mall</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">Hướng dẫn mua hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid-column-2-4">
+                        <h3 class="footer-heading">Giới thiệu</h3>
+                        <ul class="footer-list">
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">Giới thiệu</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">Tuyển dụng</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">Điều khoản</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="grid-column-2-4">
+                        <h3 class="footer-heading">Theo dõi</h3>
+                        <ul class="footer-list">
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">
+                                    <i class="fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">
+                                    <i class="fab fa-instagram-square"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">
+                                    <i class="fab fa-discord"></i>
+                                    Discord
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- <div class="grid-column-2-4">
+                        <h3 class="footer-heading">
+                            Danh mục</h3>
+                        <ul class="footer-list">
+
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">Gấu bông cao cấp</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">Thú bông</a>
+                            </li>
+
+                        </ul>
+                    </div> -->
+
+                </div>
+
+            </div>
+        </div>
+        <div class="over">
+            <p style="font-size: 0.8rem; color: rgb(219, 49, 134);">@ 2022-Bản quyền thuộc về MY PERFUME</p>
+        </div>
+
+    </div>
+    <div class="modal" id="1">
+        <div class="modal-overlay" onclick="back()"></div>
+        <div class="modal-body" id="dk">
+
+            <div style="padding-left: 30px; padding-right: 30px;">
+
+                <div class="form">
+
+                    <h3 class="form-heading">Đăng ký</h3>
+                    <span class="form-switch" onclick="pdn()">Đăng nhập</span>
+
+                </div>
+
+                <div class="form-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="name1" placeholder="Nhập tên tài khoản của bạn">
+                    </div> <br>
+                    <div class="form-group">
+                        <input type="password" class="form-input" placeholder="Nhập mật khẩu của bạn">
+                    </div> <br>
+                    <div class="form-group">
+                        <input type="password" class="form-input" placeholder="Nhập lại mật khẩu">
+                    </div>
+
+                </div> <br>
+
+                <div class="form-law">
+                    <p style="font-size: 0.8rem; text-align: center;">
+                        Bằng việc đăng ký, bạn đã đồng ý với... về
+                        <a href="" class="form-link">Điều khoản dịch vụ</a> &
+                        <a href="" class="form-link">Chính sách bảo mật</a>
+                    </p>
+                </div>
+                <div class="form-button">
+                    <button class="btn" style="margin-right: 8px;" onclick="back()">Trở Lại</button>
+                    <button class="btn" style="background-color: #EE0000; color: white;" onclick="fdk()">Đăng
+                        Ký</button>
+                </div>
+            </div>
+
+            <div class="form-conect">
+                <a href="" class="conect conect-fb">
+                    <i class="fab fa-facebook-square" style="font-size: 1.5rem;"></i>
+                    <span style="margin-left: 15px;">Kết nối với Facebook</span>
+                </a>
+                <a href="" class="conect conect-gg">
+                    <i class="fab fa-google" style="font-size: 1.5rem;"></i>
+                    <span style="margin-left: 15px; color: gray;">Kết nối với Google</span>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="modal-body" id="dn">
+
+            <div style="padding-left: 30px; padding-right: 30px;">
+
+                <div class="form">
+
+                    <h3 class="form-heading">Đăng nhập</h3>
+                    <span class="form-switch" onclick="pdk()">Đăng ký</span>
+
+                </div>
+
+                <div class="form-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="name2" placeholder="Nhập tên tài khoản của bạn">
+                    </div> <br>
+                    <div class="form-group">
+                        <input type="password" class="form-input" placeholder="Nhập mật khẩu của bạn">
+                    </div> <br>
+
+
+                </div>
+
+                <div class="form-law">
+                    <div class="form-help">
+                        <a href="" class="form-help-link" style="color: #EE0000;">Quên mật khẩu</a> |
+                        <a href="" class="form-help-link">Cần trợ giúp?</a>
+                    </div> <br> <br> <br>
+                </div>
+                <div class="form-button">
+                    <button class="btn" style="margin-right: 8px;" onclick="back()">Trở Lại</button>
+                    <button class="btn" style="background-color: #EE0000; color: white;" onclick="fdn()">Đăng
+                        Nhập</button>
+                </div>
+
+            </div>
+
+            <div class="form-conect">
+                <a href="" class="conect conect-fb">
+                    <i class="fab fa-facebook-square" style="font-size: 1.5rem;"></i>
+                    <span style="margin-left: 15px;">Kết nối với Facebook</span>
+                </a>
+                <a href="" class="conect conect-gg">
+                    <i class="fab fa-google" style="font-size: 1.5rem;"></i>
+                    <span style="margin-left: 15px; color: gray;">Kết nối với Google</span>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script>
+        function addToCart(item) {
+            // debugger;
+            item.quantity = 1;
+            console.log(item.quantity);
+            var list;
+            if (localStorage.getItem('cart') == null) {
+                list = [item];
+            } else {
+                list = JSON.parse(localStorage.getItem('cart')) || [];
+                let ok = true;
+                for (let x of list) {
+                    if (x.id == item.id) {
+                        x.quantity += 1;
+                        ok = false;
+                        break;
+                    }
+                }
+                if (ok) {
+                    list.push(item);
+                }
+            }
+            localStorage.setItem('cart', JSON.stringify(list));
+            alert("Đã thêm vào giở hàng");
+        }
+    </script>
+
+
+</body>
+
+</html>

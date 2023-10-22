@@ -1,0 +1,16 @@
+.btn{
+    width: 142px;
+    height: 36px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btn-search{
+    width: 60px;
+    background-color: #f53e2d;
+    border: none;
+    color: white;
+    height: 40px;
+    border-radius: 3px;
+    margin-right: 3px;
+}

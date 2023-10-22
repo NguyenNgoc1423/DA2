@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Thỏ</title>
+    <meta charset="urf-8">
+    <link rel="stylesheet" href="/css/trangchu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/container.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <script src="/js/trangchu.js"></script>  
+    <script src="/js/menu.js"></script> 
+   <link rel="stylesheet" href="/css/vd.css">
+   <script src="/js/click.js"></script>
+</head>
+
+<body style="margin: 0;" onload="back()">
+    <div class="app">
+
+
+        <header class="header">
+            <div class="grid" style="color: white;">
+                <nav class="header_navbar">
+                    <ul class="header_navbar-list">
+                        <li class="header_navbar-item header_navbar-QR">
+                            Tải ứng dụng về máy
+                            <div class="QR-code">
+                                <img style="width: 100%;" src="/hinhanh/QR_code.png" alt="QR code">
+                                <div class="QR-app">
+                                    <a href="" class="down-app">
+                                        <img src="/hinhanh/app store.png" class="img-app" alt="">
+                                    </a>
+                                    <a href="" class="down-app">
+                                        <img src="/hinhanh/google.png" class="img-app" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>|
+                        <li class="header_navbar-item">
+                            <span style="cursor: text;">Kết nối</span>
+                            <a href="" class="icon-link"><i class="icon fab fa-facebook-messenger"></i></a>
+                            <a href="" class="icon-link"><i class="icon fab fa-instagram-square"></i></a>
+                        </li>
+                    </ul>
+                    <ul class="header_navbar-list">
+                        <li id="thongbao" class="header_navbar-item" >
+                        
+                            <a class="header_navbar-item-link icon-link"  onclick="toggle()">
+                                
+                                <i class="icon fas fa-bell"></i>
+                                Thông Báo
+                            </a>
+                            <div class="header-noti" id="account">
+                                <header class="noti">
+                                    <h3
+                                        style="color: #999; margin-left: 12px; font-weight: 500; font-size: 0.9rem; cursor: text;">
+                                        Thông Báo Mới Nhận</h3>
+                                </header>
+                                <ul class="noti-list">
+                                    <li class="noti-item">
+                                        <a href="/index/ga2.html" class="noti-link">
+                                            <span><img src="/hinhanh/gà bụng to.jpg" class="noti-img" alt=""></span>
+                                            <div class="noti-info">
+                                                <span class="noti-name">Gà bụng to</span>
+                                                <span class="noti-descriotion">Mô tả gà bụng to</span>
+                                            </div>  
+                                        </a>
+                                    </li>
+                                    <li class="noti-item">
+                                        <a href="/index/tho4.html" class="noti-link">
+                                            <span><img src="/hinhanh/thỏ lễ hội.jpg" class="noti-img" alt=""></span>
+                                            <div class="noti-info">
+                                                <span class="noti-name">Thỏ lễ hội</span>
+                                                <span class="noti-descriotion">Mô tả thỏ lễ hội</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="noti-item">
+                                        <a href="/index/meo3.html" class="noti-link">
+                                            <span><img src="/hinhanh/mèo hoàng thượng.jpg" class="noti-img" alt=""></span>
+                                            <div class="noti-info">
+                                                <span class="noti-name">Mèo hoàng thượng</span>
+                                                <span class="noti-descriotion">Mô tả mèo hoàng thượng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="footer-noti">
+                                    <a href="" class="show-all">Xem Tất Cả</a>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="header_navbar-item " style="font-weight: 500;"><span onclick="pdk()"
+                                id="noti-dk">Đăng ký</span></li>|
+                        <li class="header_navbar-item " style="font-weight: 500;"><span onclick="pdn()"
+                                id="noti-dn">Đăng Nhập</span></li>
+                    </ul>
+                </nav>
+
+                <div class="header-with-search">
+                    <div class="header-logo">
+                        <a href="/index/trangchu.html">
+
+                            <img src="/hinhanh/Logoo-.png" class="logo" alt="">
+                        </a>
+                    </div>
+                    <div onclick="myFunction()" class="header-search">
+                        <input id="myInput" onkeyup="filterFunction()" type="text" class="search-input" placeholder="Tìm kiếm">
+                        <button class="btn-search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="header-catch">
+                            <a href="/index/cart.html" style="text-decoration: none;">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                        <div id="myDropdown" class="dropdown-content">
+                            <div style="height: 40px; background-color:#ffffff; line-height: 40px;">
+                                <strong style="color:#323c3f; margin-left: 35px;">Sản phẩm gợi ý</strong></div>
+                            <a href="/index/chitietsanpham3.html">
+                                <div class="search-content">
+                                    <div class="search-content-img">
+                                        <img class="img-gau" src="/hinhanh/gấu koala koya.jpg" alt="ảnh gấu koala">
+                                    </div>
+                                    <div class="search-noidung" >
+                                        <span class="name-item">GẤU KOALA KOYA</span><br>
+                                        <span class="price-now" style="color: #d0021b;">200.000₫</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/index/lacda2.html">
+                                <div class="search-content">
+                                    <div class="search-content-img">
+                                        <img class="img-gau" src="/hinhanh/lac đà alpaca nhiều màu.jpg" alt="ảnh lạc đà">
+                                    </div>
+                                    <div class="search-noidung">
+                                        <span class="name-item">LẠC ĐÀ ALPACA NHIỀU MÀU </span><br>
+                                        <span class="price-now" style="color: #d0021b;">143.000₫</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/index/meo3.html">
+                                <div class="search-content">
+                                    <div class="search-content-img">
+                                        <img class="img-gau" src="/hinhanh/mèo hoàng thượng.jpg" alt="ảnh mèo hoàng thượng">
+                                    </div>
+                                    <div class="search-noidung">
+                                        <span class="name-item">MÈO HOÀNG THƯỢNG </span><br>
+                                        <span class="price-now" style="color: #d0021b;">240.000₫</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/index/soc3.html">
+                                <div class="search-content">
+                                    <div class="search-content-img">
+                                        <img class="img-gau" src="/hinhanh/sóc gối ôm.jpg" alt="sóc gối ôm"> 
+                                    </div>
+                                    <div class="search-noidung">
+                                        <span class="name-item">SÓC GỐI ÔM</span><br>
+                                        <span class="price-now" style="color: #d0021b;">240.000₫</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/index/ga1.html">
+                                <div class="search-content">
+                                    <div class="search-content-img">
+                                        <img class="img-gau" src="/hinhanh/gà baby.jpg" alt="gà baby">
+                                    </div>
+                                    <div class="search-noidung">
+                                        <span class="name-item">GÀ BABY</span><br>
+                                        <span class="price-now" style="color: #db1919;">450.000₫</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+        </header>
+
+        <div class="app-container">
+            <div class="grid">
+                <div class="grid-row">
+                    <div class="grid-column-2">
+                        <img src="/hinhanh/cooky.png" style="width: 190px;" alt="">
+                        <div id="warp">
+                            <a href="meo.html"></a>
+        
+                            <div class="Danhmuc" >
+                                <div onclick="sp11()" class="menu">Gấu Koala</div>
+                                <div onclick="sp1()"class="menu">Lạc đà Alpaca</div>
+                                <div onclick="sp2()" class="menu">Mèo</div>
+                                <div onclick="sp3()" class="menu">Sóc</div>
+                                <div onclick="sp4()" class="menu">Gà</div>
+                                <div onclick="sp5()" class="menu">Hổ</div>
+                                <div onclick="sp6()" class="menu">Thỏ</div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <script src="/js/click.js"></script>
+                    <!-- <script>
+                        var acc = document.getElementsByClassName("menu");
+                        var i;
+
+                        for (i = 0; i < acc.length; i++) {
+                            acc[i].addEventListener("click", function() {
+                                // this.classList.toggle("active");
+                                var menu_con = this.nextElementSibling;
+                                if (menu_con.style.display === "block") {
+                                    menu_con.style.display = "none";
+                                } else {
+                                    menu_con.style.display = "block";
+                                }
+                            });
+                        }
+                    </script> -->
+                    <div class="grid-column-10">
+                        <div class="home">
+                         
+                           
+                            <div class="list-name-over" id="4">
+                                <span class="list-name-item">Thỏ</span>
+                            </div>
+                            <div class="grid-row">
+                                <!-- ITEM -->
+                                <div class="grid-column-2-4">
+                                    <a href="tho1.html" style="text-decoration: none;">
+                                        <div class="home-item">
+                                            <div class="home-item-img">
+                                                <img width="186px" height="186px" style="object-fit: contain"
+                                                    src="/hinhanh/thỏ 1m5.jpg">
+                                            </div>
+                                            <h4 class="name-item">Thỏ 1m5</h4>
+                                            <div class="price-item">
+                                                <span class="price-old">500.000đ</span>
+                                                <span class="price-now">450.000đ</span>
+                                            </div>
+                                            <div class="item-action">
+                                                <span class="like">
+                                                    <i class="fas fa-heart"></i>
+                                                </span>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="item-sold">
+                                                        Đã bán 999
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="item-origin">
+                                                <span class="origin">TP.Hà Nội</span>
+                                            </div>
+                                            <div class="sale-off">
+                                                <span class="sale-percent">15%</span>
+                                                <span class="sale-label">GIẢM</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid-column-2-4">
+                                    <a href="tho2.html" style="text-decoration: none;">
+                                        <div class="home-item">
+                                            <div class="home-item-img">
+                                                <img width="186px" height="186px" class="mxM4vG _2GchKS"
+                                                    src="/hinhanh/thỏ bông trắng.jpg">
+                                            </div>
+                                            <h4 class="name-item">Thỏ bông trắng</h4>
+                                            <div class="price-item">
+                                                <span class="price-old">270.000đ</span>
+                                                <span class="price-now">143.000đ</span>
+                                            </div>
+                                            <div class="item-action">
+                                                <span class="like">
+                                                    <i class="fas fa-heart"></i>
+                                                </span>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="item-sold">
+                                                        Đã bán 800
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="item-origin">
+                                                <span class="origin">TP.Hà Nội</span>
+                                            </div>
+                                            <div class="sale-off">
+                                                <span class="sale-percent">10%</span>
+                                                <span class="sale-label">GIẢM</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid-column-2-4">
+                                    <a href="tho3.html" style="text-decoration: none;">
+                                        <div class="home-item">
+                                            <div class="home-item-img">
+                                                <img width="186px" height="186px"
+                                                    src="/hinhanh/thỏ cute.jpg">
+                                            </div>
+                                            <h4 class="name-item">Thỏ cute</h4>
+                                            <div class="price-item">
+                                                <span class="price-old">300.000đ</span>
+                                                <span class="price-now">240.000đ</span>
+                                            </div>
+                                            <div class="item-action">
+                                                <span class="like">
+                                                    <i class="fas fa-heart"></i>
+                                                </span>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="item-sold">
+                                                        Đã bán 2,3k
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="item-origin">
+                                                <span class="origin">TP.Hà Nội</span>
+                                            </div>
+                                            <div class="sale-off">
+                                                <span class="sale-percent">20%</span>
+                                                <span class="sale-label">GIẢM</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid-column-2-4">
+                                    <a href="" style="text-decoration: none;">
+                                        <div class="home-item">
+                                            <div class="home-item-img">
+                                                <img width="186px" height="186px" class="mxM4vG _2GchKS"
+                                                    src="/hinhanh/thỏ gối ôm.jpg">
+                                            </div>
+                                            <h4 class="name-item">Thỏ gối ôm</h4>
+                                            <div class="price-item">
+                                                <span class="price-old">350.000đ</span>
+                                                <span class="price-now">340.000đ</span>
+                                            </div>
+                                            <div class="item-action">
+                                                <span class="like">
+                                                    <i class="fas fa-heart"></i>
+                                                </span>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="item-sold">
+                                                        Đã bán 7,7k
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="item-origin">
+                                                <span class="origin">TP.Hà Nội</span>
+                                            </div>
+                                            <div class="sale-off">
+                                                <span class="sale-percent">10%</span>
+                                                <span class="sale-label">GIẢM</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid-column-2-4">
+                                    <a href="tho4.html" style="text-decoration: none;">
+                                        <div class="home-item">
+                                            <div class="home-item-img">
+                                                <img width="186px" height="186px" class="mxM4vG _2GchKS"
+                                                    src="/hinhanh/thỏ lễ hội.jpg">
+                                            </div>
+                                            <h4 class="name-item">Thỏ lễ hội</h4>
+                                            <div class="price-item">
+                                                <span class="price-old">270.000đ</span>
+                                                <span class="price-now">151.000đ</span>
+                                            </div>
+                                            <div class="item-action">
+                                                <span class="like">
+                                                    <i class="fas fa-heart"></i>
+                                                </span>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="item-sold">
+                                                        Đã bán 2,4k
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="item-origin">
+                                                <span class="origin">TP.Hà Nội</span>
+                                            </div>
+                                            <div class="sale-off">
+                                                <span class="sale-percent">10%</span>
+                                                <span class="sale-label">GIẢM</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid-column-2-4">
+                                    <a href="" style="text-decoration: none;">
+                                        <div class="home-item">
+                                            <div class="home-item-img">
+                                                <img width="186px" height="186px" class="mxM4vG _2GchKS"
+                                                    src="/hinhanh/thỏ mặc váy.jpg">
+                                            </div>
+                                            <h4 class="name-item">Thỏ mặc váy</h4>
+                                            <div class="price-item">
+                                                <span class="price-old">385.000đ</span>
+                                                <span class="price-now">299.999đ</span>
+                                            </div>
+                                            <div class="item-action">
+                                                <span class="like">
+                                                    <i class="fas fa-heart"></i>
+                                                </span>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="item-sold">
+                                                        Đã bán 900
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="item-origin">
+                                                <span class="origin">TP.Hà Nội</span>
+                                            </div>
+                                            <div class="sale-off">
+                                                <span class="sale-percent">10%</span>
+                                                <span class="sale-label">GIẢM</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid-column-2-4">
+                                    <a href="" style="text-decoration: none;">
+                                        <div class="home-item">
+                                            <div class="home-item-img">
+                                                <img width="186px" height="186px" style="object-fit: contain"
+                                                    src="/hinhanh/thỏ ngọc.jpg">
+                                            </div>
+                                            <h4 class="name-item">Thỏ ngọc</h4>
+                                            <div class="price-item">
+                                                <span class="price-old">400.000đ</span>
+                                                <span class="price-now">350.000đ</span>
+                                            </div>
+                                            <div class="item-action">
+                                                <span class="like">
+                                                    <i class="fas fa-heart"></i>
+                                                </span>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="item-sold">
+                                                        Đã bán 5k
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="item-origin">
+                                                <span class="origin">TP.Hà Nội</span>
+                                            </div>
+                                            <div class="sale-off">
+                                                <span class="sale-percent">30%</span>
+                                                <span class="sale-label">GIẢM</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid-column-2-4">
+                                    <a href="" style="text-decoration: none;">
+                                        <div class="home-item">
+                                            <div class="home-item-img">
+                                                <img width="186px" height="186px" class="mxM4vG _2GchKS"
+                                                    src="/hinhanh/thỏ nhiều màu.jpg">
+                                            </div>
+                                            <h4 class="name-item">Thỏ nhiều màu</h4>
+                                            <div class="price-item">
+                                                <span class="price-old">270.000đ</span>
+                                                <span class="price-now">143.000đ</span>
+                                            </div>
+                                            <div class="item-action">
+                                                <span class="like">
+                                                    <i class="fas fa-heart"></i>
+                                                </span>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="item-sold">
+                                                        Đã bán 800
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="item-origin">
+                                                <span class="origin">TP.Hà Nội</span>
+                                            </div>
+                                            <div class="sale-off">
+                                                <span class="sale-percent">10%</span>
+                                                <span class="sale-label">GIẢM</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid-column-2-4">
+                                    <a href="" style="text-decoration: none;">
+                                        <div class="home-item">
+                                            <div class="home-item-img">
+                                                <img width="186px" height="186px"
+                                                    src="/hinhanh/thỏ phi hành gia.jpg">
+                                            </div>
+                                            <h4 class="name-item">Thỏ phi hành gia</h4>
+                                            <div class="price-item">
+                                                <span class="price-old">270.000đ</span>
+                                                <span class="price-now">159.000đ</span>
+                                            </div>
+                                            <div class="item-action">
+                                                <span class="like">
+                                                    <i class="fas fa-heart"></i>
+                                                </span>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="item-sold">
+                                                        Đã bán 2,3k
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="item-origin">
+                                                <span class="origin">TP.Hà Nội</span>
+                                            </div>
+                                            <div class="sale-off">
+                                                <span class="sale-percent">30%</span>
+                                                <span class="sale-label">GIẢM</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid-column-2-4">
+                                    <a href="" style="text-decoration: none;">
+                                        <div class="home-item">
+                                            <div class="home-item-img">
+                                                <img width="186px" height="186px" class="mxM4vG _2GchKS"
+                                                    src="/hinhanh/thỏ quàng khăn.jpg">
+                                            </div>
+                                            <h4 class="name-item">Thỏ quàng khăn</h4>
+                                            <div class="price-item">
+                                                <span class="price-old">350.000đ</span>
+                                                <span class="price-now">340.000đ</span>
+                                            </div>
+                                            <div class="item-action">
+                                                <span class="like">
+                                                    <i class="fas fa-heart"></i>
+                                                </span>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="item-sold">
+                                                        Đã bán 7,7k
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="item-origin">
+                                                <span class="origin">TP.Hà Nội</span>
+                                            </div>
+                                            <div class="sale-off">
+                                                <span class="sale-percent">10%</span>
+                                                <span class="sale-label">GIẢM</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid-column-2-4">
+                                    <a href="" style="text-decoration: none;">
+                                        <div class="home-item">
+                                            <div class="home-item-img">
+                                                <img width="186px" height="186px" class="mxM4vG _2GchKS"
+                                                    src="/hinhanh/thỏ ôm trái đào.jpg">
+                                            </div>
+                                            <h4 class="name-item">Thỏ ôm trái đào</h4>
+                                            <div class="price-item">
+                                                <span class="price-old">270.000đ</span>
+                                                <span class="price-now">151.000đ</span>
+                                            </div>
+                                            <div class="item-action">
+                                                <span class="like">
+                                                    <i class="fas fa-heart"></i>
+                                                </span>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="item-sold">
+                                                        Đã bán 2,4k
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="item-origin">
+                                                <span class="origin">TP.Hà Nội</span>
+                                            </div>
+                                            <div class="sale-off">
+                                                <span class="sale-percent">10%</span>
+                                                <span class="sale-label">GIẢM</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="grid-column-2-4">
+                                    <a href="" style="text-decoration: none;">
+                                        <div class="home-item">
+                                            <div class="home-item-img">
+                                                <img width="186px" height="186px" class="mxM4vG _2GchKS"
+                                                    src="/hinhanh/thỏ ăn dâu.jpg">
+                                            </div>
+                                            <h4 class="name-item">Thỏ ăn dâu</h4>
+                                            <div class="price-item">
+                                                <span class="price-old">385.000đ</span>
+                                                <span class="price-now">299.999đ</span>
+                                            </div>
+                                            <div class="item-action">
+                                                <span class="like">
+                                                    <i class="fas fa-heart"></i>
+                                                </span>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="item-sold">
+                                                        Đã bán 900
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="item-origin">
+                                                <span class="origin">TP.Hà Nội</span>
+                                            </div>
+                                            <div class="sale-off">
+                                                <span class="sale-percent">10%</span>
+                                                <span class="sale-label">GIẢM</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="grid">
+                <div class="grid-row grid-row-footer">
+                    <div class="grid-column-2-4">
+                        <h3 class="footer-heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-list-item">
+
+                                <a href="" class="footer-list-item-link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">MN-Shop Mall</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">Hướng dẫn mua hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid-column-2-4">
+                        <h3 class="footer-heading">Giới thiệu</h3>
+                        <ul class="footer-list">
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">Giới thiệu</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">Tuyển dụng</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">Điều khoản</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="grid-column-2-4">
+                        <h3 class="footer-heading">Theo dõi</h3>
+                        <ul class="footer-list">
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">
+                                    <i class="fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">
+                                    <i class="fab fa-instagram-square"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">
+                                    <i class="fab fa-discord"></i>
+                                    Discord
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- <div class="grid-column-2-4">
+                        <h3 class="footer-heading">
+                            Danh mục</h3>
+                        <ul class="footer-list">
+
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">Gấu bông cao cấp</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">Thú bông</a>
+                            </li>
+
+                        </ul>
+                    </div> -->
+
+                </div>
+
+            </div>
+        </div>
+        <div class="over">
+            <p style="font-size: 0.8rem; color: hotpink;">@ 2022-Bản quyền thuộc về MY PERFUME</p>
+        </div>
+    </div>
+    <div class="modal" id="1">
+        <div class="modal-overlay"></div>
+        <div class="modal-body" id="dk">
+
+            <div style="padding-left: 30px; padding-right: 30px;">
+
+                <div class="form">
+
+                    <h3 class="form-heading">Đăng ký</h3>
+                    <span class="form-switch" onclick="pdn()">Đăng nhập</span>
+
+                </div>
+
+                <div class="form-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="name1" placeholder="Nhập tên đăng nhập của bạn">
+                    </div> <br>
+                    <div class="form-group">
+                        <input type="password" class="form-input" placeholder="Nhập mật khẩu của bạn">
+                    </div> <br>
+                    <div class="form-group">
+                        <input type="password" class="form-input" placeholder="Nhập lại mật khẩu">
+                    </div>
+
+                </div> <br>
+
+                <div class="form-law">
+                    <p style="font-size: 0.8rem; text-align: center;">
+                        Bằng việc đăng ký, bạn đã đồng ý với... về
+                        <a href="" class="form-link">Điều khoản dịch vụ</a> &
+                        <a href="" class="form-link">Chính sách bảo mật</a>
+                    </p>
+                </div>
+                <div class="form-button">
+                    <button class="btn" style="margin-right: 8px;" onclick="back()">Trở Lại</button>
+                    <button class="btn" style="background-color: #EE0000; color: white;" onclick="fdk()">Đăng
+                        Ký</button>
+                </div>
+            </div>
+
+            <div class="form-conect">
+                <a href="" class="conect conect-fb">
+                    <i class="fab fa-facebook-square" style="font-size: 1.5rem;"></i>
+                    <span style="margin-left: 15px;">Kết nối với Facebook</span>
+                </a>
+                <a href="" class="conect conect-gg">
+                    <i class="fab fa-google" style="font-size: 1.5rem;"></i>
+                    <span style="margin-left: 15px; color: gray;">Kết nối với Google</span>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="modal-body" id="dn">
+
+            <div style="padding-left: 30px; padding-right: 30px;">
+
+                <div class="form">
+
+                    <h3 class="form-heading">Đăng nhập</h3>
+                    <span class="form-switch" onclick="pdk()">Đăng ký</span>
+
+                </div>
+
+                <div class="form-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="name2" placeholder="Nhập tên đăng nhập của bạn">
+                    </div> <br>
+                    <div class="form-group">
+                        <input type="password" class="form-input" placeholder="Nhập mật khẩu của bạn">
+                    </div> <br>
+
+
+                </div>
+
+                <div class="form-law">
+                    <div class="form-help">
+                        <a href="" class="form-help-link" style="color: #EE0000;">Quên mật khẩu</a> |
+                        <a href="" class="form-help-link">Cần trợ giúp?</a>
+                    </div> <br> <br> <br>
+                </div>
+                <div class="form-button">
+                    <button class="btn" style="margin-right: 8px;" onclick="back()">Trở Lại</button>
+                    <button class="btn" style="background-color: #EE0000; color: white;" onclick="fdn()">Đăng
+                        Nhập</button>
+                </div>
+
+            </div>
+
+            <div class="form-conect">
+                <a href="" class="conect conect-fb">
+                    <i class="fab fa-facebook-square" style="font-size: 1.5rem;"></i>
+                    <span style="margin-left: 15px;">Kết nối với Facebook</span>
+                </a>
+                <a href="" class="conect conect-gg">
+                    <i class="fab fa-google" style="font-size: 1.5rem;"></i>
+                    <span style="margin-left: 15px; color: gray;">Kết nối với Google</span>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

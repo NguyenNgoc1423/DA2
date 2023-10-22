@@ -1,0 +1,59 @@
+
+#header-search {
+	width: 50px;
+}
+
+body{
+	margin: 0;
+}
+.content{
+	margin:0 auto;
+	padding-left: 30px;
+	display: block;
+	width: 70%;
+	background-color: white;
+}
+.tb{	
+	text-align: center; 
+	width: 100%; 
+	padding-left: 0px;
+	border-bottom: 1px solid #ee0000;
+	padding-top: 20px;	
+	padding-bottom: 20px;
+}
+.total-price{
+	color: rgb(255, 0, 0);
+	font-size: 1.3rem;
+}
+
+.img-sp{
+	width: 60px;
+	height:60px;
+}	
+
+.item-name{
+	font-size: 16px;	
+}
+
+.new-price{
+	color: red;
+	font-size: 1.3rem;
+}
+.cart-product{
+	padding-left: 20px;
+}
+.soluong{	
+	width: 10px;
+	height: 20px;
+	border: none;
+	outline: none;
+}
+
+h3{
+	padding-left: 100px;
+}
+.fa-trash{
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: white;
+}

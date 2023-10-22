@@ -1,0 +1,40 @@
+.menu {
+    text-decoration: none;
+    list-style: none;
+    height: max-content;
+    padding: 0px 10px;
+}
+
+#warp {
+    padding-top: 10px;
+    background-color: #ffb1d9;
+    border-radius: 10px;
+    border: 3px solid black;
+    padding: 0px;
+   
+}
+
+#Danhmuc {
+    padding-bottom: 0px;
+    
+}
+
+.menu {
+    cursor: pointer;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+    transition: 0.5s;
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu:last-child {
+    border-bottom: none;
+}
+
+
+.menu:hover { 
+    color: rgb(0, 64, 255);
+}
+

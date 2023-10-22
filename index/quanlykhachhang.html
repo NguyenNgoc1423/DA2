@@ -1,0 +1,271 @@
+<!Doctype html>
+<html>
+    <head>
+    <title>quản lý khách hàng </title>
+    <meta charset="urf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/quanlysanpham.js"></script>
+    
+    </head>
+<body onload="back1()">
+    <div class="grid">
+        <div class="colum2">           
+            
+                <h3 style="padding-left: 25px;">Menu</h3>
+                <a href="/index/main.html">Bảng điều khiển</a>
+                <a href="/index/Danhmuc.html">Danh mục</a>
+                <a href="/index/product.html">Quản lý sản phẩm</a>
+                <a href="">Quản lý khách hàng</a>
+                <a href="/index/User.html">Quản lý người dùng</a>
+                <a href="/index/QLdonhang.html">Đơn đặt hàng</a>
+                <a href="/index/login.html">Đăng xuất</a>
+
+           
+        </div>
+        <div class="colum10">
+      
+                <div class="header">
+                    <i class="fas fa-home"></i>
+                    <p style="padding-left: 20px;">Quản lý khách hàng</p>
+                </div>
+                <div class="user-content">
+
+                    <div class="list-nv">
+                        <h4>Danh sách tài khoản</h4>
+                        <button class="btn add" onclick="faddProduct1()">
+                            Thêm mới
+                        </button>
+                    </div>
+                    
+
+                    <table class="tb tb-user" cellspacing="0" cellpadding="5">
+                        <thead>
+                            <th>ID</th>
+                            <th>Tên người dùng</th>
+                            <th>Địa chỉ</th>
+                            <th>Điện thoại</th>
+                            <th>Email</th>
+                            <th>Phân loại</th>
+                            <th>Action</th>
+                        </thead>
+                        <tbody id="result">
+                            <tr>
+                                <td class="num"></td>
+                                <td>Nguyễn Thị Giang</td>
+                                <td>Hà Nội</td>
+                                <td>0987838760</td>
+                                <td>giangnguyen5241@gmail.com</td>
+                                <td><p style="color: red;">VIP</p></td>
+                                <td>                                    
+                                     <button class="btn update">Cập nhật</button>
+                                     <button class="btn delete" onclick="Xoa(this)">Xóa bỏ</button>                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="num"></td>
+                                <td>Trần Thị Hiền</td>
+                                <td>Hải Phòng</td>
+                                <td>0954946285</td>
+                                <td>tranhien5142@gmail.com</td>
+                                <td><p style="color: blue;">Thường</p></td>
+                                <td>                                    
+                                     <button class="btn update">Cập nhật</button>
+                                     <button class="btn delete" onclick="Xoa(this)">Xóa bỏ</button>                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+    <div class="modal" id="2">
+        <div class="modal-overlay" onclick="back1()"></div>
+        <div class="modal-body">
+            <div class="panel">
+                <div class="panel-heading">
+                    Thêm Tài Khoản
+                </div>
+                <div class="panel-body">
+                    <form>               
+                        <div class="form-group">
+                            <label>Tên người dùng: </label>
+                            
+                            <input class="form-control" type="text" name="product_name" id="product_name" placeholder="Nhập tên người dùng">
+                        </div>
+                        <div class="form-group">
+                            <label>Địa chỉ: </label>
+                            <input class="form-control" type="text" name="dia_chi" id="dia_chi"
+                                placeholder="Nhập địa chỉ">
+                        </div>
+                        <div class="form-group">
+                            <label>Số điện thoại: </label>
+                            <input class="form-control" type="text" name="sdt" id="sdt">
+                        </div>
+                        <div class="form-group">
+                            <label>Email: </label>
+                            <input class="form-control" type="text" name="email" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label>Phân loại: </label>
+                            <select name="" id="category_name" class="form-control">        
+                            </select>
+                        </div>                                     
+                        <div class="form-group">
+                            <button class="btn btn-success" type="button" onclick="addProduct(), back1()">Thêm</button>
+                            <button class="btn btn-danger" type="reset">Reset</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        
+        var phanLoai = {
+            "VIP": [],
+            "Thường": []
+        }
+
+        var dsSanPham = []
+
+        var category = document.getElementById('category_name')
+
+        for (var key in phanLoai) {
+            category.innerHTML += `<option value='${key}'>${key}</option>`
+        }
+        
+
+        // Hàm tính tổng tiền
+        // function updateTotalPrice() {
+        //     var price = document.getElementById('price').value
+        //     var soluong = document.getElementById('soluong').value
+
+        //     totalPrice = price * soluong
+
+        //     document.getElementById('total_price').value = totalPrice
+        // }
+        function Xoa(x){
+                tr = x.parentElement.parentElement;
+                tr.remove();
+            }
+        //Tạo biến đếm
+        var count = 0;
+        function addProduct(){
+            var tenSP = document.getElementById('product_name').value            
+            var giaTien = document.getElementById('dia_chi').value
+            var soLuong = document.getElementById('sdt').value
+            var tongTien = document.getElementById('email').value
+            var loaiSP = document.getElementById('category_name').value
+            console.log(tenSP,giaTien,soLuong,tongTien,loaiSP)
+            document.getElementById('result').innerHTML += `
+                                 <tr class="tr">
+                                     <td class="num"></td>
+                                    <td>`+tenSP+`</td>
+                                     <td><p style="color: red;">`+giaTien+`</p></td>
+                                     <td>`+soLuong+`</td>
+                                     <td><p style="color: red;">`+tongTien+`</p></td>
+                                     <td>`+loaiSP+`</td>       
+                                     <td>
+                                         <button class="btn btn-success" onclick="editProduct(${count - 1}), faddProduct1()">Cập nhật</button>
+                                         <button class="btn btn-danger" onclick="Xoa(this)">Xóa bỏ</button>
+                                     </td>
+                                </tr>
+         `
+
+
+        }
+        //Lấy dữ liệu thêm sản phẩm
+        // function addProduct() {
+        //     var index = document.getElementById('index').value
+
+           
+        //     var tenSP = document.getElementById('product_name').value            
+        //     var giaTien = document.getElementById('dia_chi').value
+        //     var soLuong = document.getElementById('sdt').value
+        //     var tongTien = document.getElementById('email').value
+        //     var loaiSP = document.getElementById('category_name').value
+
+        //     var sanPham = {
+               
+        //         'tenSP': tenSP,
+        //         'giaTien': giaTien,
+        //         'soLuong': soLuong,
+        //         'tongTien': tongTien,
+        //         'loaiSP': loaiSP          
+                
+        //     }
+
+        //     if (index != 0) {
+        //         dsSanPham[index] = sanPham
+        //         showProduct()
+        //         return;
+        //     }
+
+           
+            
+        //     //Thêm phần tử vào mảng
+        //     dsSanPham.push(sanPham)
+ 
+        //     //Đổ dữ liệu
+        //     document.getElementById('result').innerHTML += `
+        //                         <tr class="tr">
+        //                             <td>${++count}</td>
+        //                             <td>${tenSP}</td>
+        //                             <td><p style="color: red;">${giaTien}</p></td>
+        //                             <td>${soLuong}</td>
+        //                             <td><p style="color: red;">${tongTien}</p></td>
+        //                             <td>${loaiSP}</td>       
+        //                             <td>
+        //                                 <button class="btn btn-success" onclick="editProduct(${count - 1}), faddProduct1()">Cập nhật</button>
+        //                                 <button class="btn btn-danger" onclick="deleteProduct(${count - 1})">Xóa bỏ</button>
+        //                             </td>
+        //                         </tr>
+        //     `
+        // }
+
+        // function deleteProduct(index) {
+        //     dsSanPham.splice(index, 1)
+        //     showProduct();
+        // }
+
+        // function showProduct() {
+        //     document.getElementById('result').innerHTML = ''
+        //     for (var i = 0; i < dsSanPham.length; i++) {
+        //         document.getElementById('result').innerHTML += `
+        //                         <tr>
+        //                             <td>${i + 1}</td>
+        //                             <td>${dsSanPham[i].tenSP}</td>
+        //                             <td>${dsSanPham[i].giaTien}</td>
+        //                             <td>${dsSanPham[i].soLuong}</td>
+        //                             <td>${dsSanPham[i].tongTien}</td>
+        //                             <td>${dsSanPham[i].loaiSP}</td>
+                                    
+        //                             <td>
+
+        //                                 <button class="btn btn-success" onclick="editProduct(${i})">Cập nhật</button>
+        //                                 <button class="btn btn-danger" onclick="deleteProduct(${i})">Xóa bỏ</button>
+
+        //                             </td>
+        //                         </tr>
+        //     `
+        //     }
+        // }
+        // function editProduct(index) {
+        //     var sanpham = dsSanPham[index]
+        //     document.getElementById('index').value = index
+            
+        //     document.getElementById('product_name').value = sanpham.tenSP
+        //     document.getElementById('dia_chi').value = sanpham.giaTien
+        //     document.getElementById('sdt').value = sanpham.soLuong
+        //     document.getElementById('email').value = sanpham.tongTien
+        //     document.getElementById('category_name').value = sanpham.loaiSP
+          
+        // }
+
+    </script>
+    </body>
+</html>

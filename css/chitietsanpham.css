@@ -1,0 +1,109 @@
+.item-over{
+
+    display: flex;
+}
+.item-over-img{
+    width: 45%;
+
+    padding: 5px 5px 0 40px;
+}
+
+.img-bot{
+    display: flex;
+}
+.box1{
+    padding-left: 13px;
+
+}
+.item-over-text{
+    width: 55%;
+    padding: 5px 5px 0 5px;
+    margin-left: 70px;
+}
+.item-over-text-rate{
+    display: flex;
+    padding-bottom: 13px;
+}
+.star1{
+    font-size: 0.8rem;
+    color: #d0011b;
+}
+.item-over-text-price{
+    display: flex;
+    background-color: #F5F5F5 
+}
+.item-over-text-price-new{
+    display: flex;
+    margin-left: 10px;
+}
+.item-over-text-price-percent{
+    margin-left: 15px; 
+    background-color: #d0011b; 
+    color:white;
+    border-radius: 2px;
+  width: 63px;
+  height: 20px;
+}
+.item-over-text-price-over{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    height: 56px;
+}
+.SLSP{
+    display: flex;
+    margin-top: 190px;
+}
+.btn_SLSP{
+    display: flex;
+    margin-left: 40px;
+    margin-top: 7px;
+}
+.p-btn{
+    width: 31px;
+    height: 31px;
+    text-align: center;
+    outline: none;
+}
+.item-over-text-cart-over{
+    display: flex;
+}
+.btn{
+    width: 182px;
+    height: 86px;
+}
+.item-over-text-cart-left{
+    background-color: #fbebed;
+    align-items: center;
+   
+}
+.item-over-text-cart-right{
+    margin-left:10px;
+    background-color: #d0011b; 
+    color:white
+}
+.item-over-text-share{
+   margin-top: 50px;
+}
+.fab:hover{
+    color: red;
+}
+.danh-muc{
+    display: flex;
+    font-size: 0.9rem;
+    padding-top: 1.5rem;
+    font-weight: bolder;
+}
+.chi-tiet{
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+.input-slsp{
+    height: 25px;
+    width: 40px; 
+    text-align: center; 
+    outline: none;
+     border-left: none; 
+     border-right: none;
+}
+

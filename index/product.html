@@ -1,0 +1,339 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Sản phẩm</title>
+    <meta charset="urf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/quanlysanpham.js"></script>
+    
+
+</head>
+
+<body onload="back()">
+    <div class="grid">
+        <div class="colum2">
+
+            <h3 style="padding-left: 25px;">Menu</h3>
+            <a href="/index/main.html">Bảng điều khiển</a>
+            <a href="/index/Danhmuc.html">Danh mục</a>
+            <a href="">Quản lý sản phẩm</a>
+            <a href="/index/quanlykhachhang.html">Quản lý khách hàng</a>
+            <a href="/index/User.html">Quản lý người dùng</a>
+            <a href="/index/QLdonhang.html">Đơn đặt hàng</a>
+            <a href="/index/login.html">Đăng xuất</a>
+
+
+        </div>
+        <div class="colum10">
+
+            <div class="header">
+                <i class="fas fa-home"></i>
+                <p style="padding-left: 20px;">Quản lý sản phẩm</p>
+            </div>
+            <div class="user-content">
+                <div class="list-nv">
+                    <h4>Danh sách sản phẩm</h4>
+                    <button class="btn add" onclick="faddProduct()">
+                        Thêm mới
+                    </button>
+                </div>
+                <table class="tb tb-user" cellspacing="0" cellpadding="5">
+                    <tr>
+                        <thead bgcolor="#efefef">
+                            <th>STT</th>
+                            <th>Mã sản phẩm</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Phân loại</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Tổng tiền</th>
+                            <th>Action</th>
+                        </thead>
+                    </tr>
+                    <tbody id="result">
+                        <tr>
+                            <td class="num"></td>
+                            <td>SP01</td>
+                            <td>Sóc nâu</td>
+                            <td>Sóc</td>
+                            <td><p style="color: red;">300000</p></td>
+                            <td>100</td>
+                            <td><p style="color: red;">3000000</p></td>
+                            <td>
+
+                                <button class="btn btn-success" >Cập nhật</button>
+                                <button onclick="Xoa(this)" class="btn btn-danger" >Xóa bỏ</button>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="num"></td>
+                            <td>SP02</td>
+                            <td>Mèo ngái ngủ</td>
+                            <td>Mèo</td>
+                            <td><p style="color: red;">200000</p></td>
+                            <td>200</td>
+                            <td><p style="color: red;">1200000</p></td>
+                            <td>
+
+                                <button class="btn btn-success" >Cập nhật</button>
+                                <button onclick="Xoa(this)" class="btn btn-danger" >Xóa bỏ</button>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="num"></td>
+                            <td>SP03</td>
+                            <td>Thỏ snowball</td>
+                            <td>Thỏ</td>
+                            <td><p style="color: red;">200000</p></td>
+                            <td>367</td>
+                            <td><p style="color: red;">600000</p></td>
+                            <td>
+
+                                <button class="btn btn-success" >Cập nhật</button>
+                                <button onclick="Xoa(this)" class="btn btn-danger" >Xóa bỏ</button>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="num"></td>
+                            <td>SP04</td>
+                            <td>Hổ khóc nhè</td>
+                            <td>Hổ</td>
+                            <td><p style="color: red;">400000</p></td>
+                            <td>265</td>
+                            <td><p style="color: red;">6800000</p></td>
+                            <td>
+
+                                <button class="btn btn-success" >Cập nhật</button>
+                                <button onclick="Xoa(this)" class="btn btn-danger" >Xóa bỏ</button>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="num"></td>
+                            <td>SP05</td>
+                            <td>Lạc đà Alpaca nằm ngủ</td>
+                            <td>Lạc đà Alpaca</td>
+                            <td><p style="color: red;">250000</p></td>
+                            <td>476</td>
+                            <td><p style="color: red;">9000000</p></td>
+                            <td>
+
+                                <button class="btn btn-success" >Cập nhật</button>
+                                <button onclick="Xoa(this)" class="btn btn-danger" >Xóa bỏ</button>
+
+                            </td>
+                        </tr>                      
+                    </tbody>
+                </table>
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="1">
+        <div class="modal-overlay" onclick="back()"></div>
+        <div class="modal-body">
+            <div class="panel">
+                <div class="panel-heading">
+                    Thêm Sản Phẩm
+                </div>
+                <div class="panel-body">
+                    <form>
+
+                        
+                        <div class="form-group">
+                            <label>Mã sản phẩm: </label>
+                            <input type="number" name="index" id="index" value="" hidden="true">
+                            <input class="form-control" type="text" name="msp" id="msp" placeholder="Nhập mã sản phẩm">
+                        </div>
+                        <div class="form-group">
+                            <label>Tên sản phẩm: </label>
+                            <input class="form-control" type="text" name="product_name" id="product_name"
+                                placeholder="Nhập tên sản phẩm">
+                        </div>
+                        <div class="form-group">
+                            <label>Phân loại: </label>
+                            <select name="" id="category_name" class="form-control">
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Giá: </label>
+                            <input class="form-control" type="number" name="price" id="price" value="0"
+                                onkeyup="updateTotalPrice()">
+                        </div>
+                        <div class="form-group">
+                            <label>Số lượng: </label>
+                            <input class="form-control" type="number" name="quantity" id="soluong" value="0"
+                                onkeyup="updateTotalPrice()">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tổng tiền: </label>
+                            <input class="form-control" type="text" name="total_price" id="total_price" value="0"
+                                disabled="true">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success" type="button" onclick="addProduct(), back()">Thêm</button>
+                            <button class="btn btn-danger" type="reset">Reset</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var phanLoai = {
+            "Gấu Koala": [],
+            "Lạc đà Alpaca": [],
+            "Mèo": [],
+            "sóc": [],
+            "Gà": [],
+            "Hổ": [],
+            "Thỏ": []
+        }
+
+        var dsSanPham = []
+
+        var category = document.getElementById('category_name')
+
+        for (var key in phanLoai) {
+            category.innerHTML += `<option value='${key}'>${key}</option>`
+        }
+        
+
+        // Hàm tính tổng tiền
+        function updateTotalPrice() {
+            var price = document.getElementById('price').value
+            var soluong = document.getElementById('soluong').value
+
+            totalPrice = price * soluong
+
+            document.getElementById('total_price').value = totalPrice
+        }
+
+        //Tạo biến đếm
+        var count = 0;
+        //Lấy dữ liệu thêm sản phẩm
+        function addProduct() {
+            var index = document.getElementById('index').value
+
+            var maSP = document.getElementById('msp').value
+            var tenSP = document.getElementById('product_name').value
+            var loaiSP = document.getElementById('category_name').value
+            var giaTien = document.getElementById('price').value
+            var soLuong = document.getElementById('soluong').value
+            var tongTien = document.getElementById('total_price').value
+
+            var sanPham = {
+                'maSP': maSP,
+                'tenSP': tenSP,
+                'loaiSP': loaiSP,
+                'giaTien': giaTien,
+                'soLuong': soLuong,
+                'tongTien': tongTien
+            }
+            if(maSP == "")
+            {
+                alert("Vui lòng điền mã sản phẩm");
+                return;
+            }
+            if(tenSP == "")
+            {
+                alert("Vui lòng điền tên sản phẩm");
+                return;
+            }
+            if(giaTien < 0 || giaTien == 0)
+            {
+                alert("Giá tiền phải lớn hơn 0");
+                return;
+            }
+            if(soLuong < 0 || soLuong == 0)
+            {
+                alert("Số lượng phải lớn hơn 0");
+                return;
+            }
+
+            if (index != 0) {
+                dsSanPham[index] = sanPham
+                showProduct()
+                return;
+            }
+
+           
+            
+            //Thêm phần tử vào mảng
+            dsSanPham.push(sanPham)
+ 
+            //Đổ dữ liệu
+            document.getElementById('result').innerHTML += `
+                                <tr class="tr">
+                                    <td class="num"></td>
+                                    <td>${maSP}</td>
+                                    <td>${tenSP}</td>
+                                    <td>${loaiSP}</td>
+                                    <td><p style="color: red;">${giaTien}</p></td>
+                                    <td>${soLuong}</td>
+                                    <td><p style="color: red;">${tongTien}</p></td>
+                                    <td>
+
+                                        <button class="btn btn-success" onclick="editProduct(${count - 1}), faddProduct()">Cập nhật</button>
+                                        <button class="btn btn-danger" onclick="Xoa(this)">Xóa bỏ</button>
+
+                                    </td>
+                                </tr>
+            `
+        }
+
+        // function deleteProduct(index) {
+        //     dsSanPham.splice(index, 1)
+        //     showProduct();
+        // }
+            function Xoa(x){
+                tr = x.parentElement.parentElement;
+                tr.remove();
+            }
+        function showProduct() {
+            document.getElementById('result').innerHTML = ''
+            for (var i = 0; i < dsSanPham.length; i++) {
+                document.getElementById('result').innerHTML += `
+                                <tr>
+                                    <td>${i + 1}</td>
+                                    <td>${dsSanPham[i].maSP}</td>
+                                    <td>${dsSanPham[i].tenSP}</td>
+                                    <td>${dsSanPham[i].loaiSP}</td>
+                                    <td>${dsSanPham[i].giaTien}</td>
+                                    <td>${dsSanPham[i].soLuong}</td>
+                                    <td>${dsSanPham[i].tongTien}</td>
+                                    <td>
+
+                                        <button class="btn btn-success" onclick="editProduct(${i})">Cập nhật</button>
+                                        <button class="btn btn-danger" onclick="deleteProduct(${i})">Xóa bỏ</button>
+
+                                    </td>
+                                </tr>
+            `
+            }
+        }
+        function editProduct(index) {
+            var sanpham = dsSanPham[index]
+            document.getElementById('index').value = index
+            document.getElementById('msp').value = sanpham.maSP
+            document.getElementById('product_name').value = sanpham.tenSP
+            document.getElementById('category_name').value = sanpham.loaiSP
+            document.getElementById('price').value = sanpham.giaTien
+            document.getElementById('soluong').value = sanpham.soLuong
+            document.getElementById('total_price').value = sanpham.tongTien
+        }
+
+    </script>
+</body>
+
+</html>

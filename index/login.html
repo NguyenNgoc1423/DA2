@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/login.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+
+
+        <form action="main.html" method="POST" class="form" id="form-2">
+            <h3 class="heading">Đăng nhập</h3>
+
+
+            <div class="spacer"></div>
+
+            <div class="form-group">
+                <label for="taikhoan" class="form-label">Tài khoản</label>
+                <input id="taikhoan" name="taikhoan" placeholder="Nhập tài khoản" type="text" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <button class="form-submit">Đăng nhập</button>
+            <label id="err" style="color: red;"></label>
+        </form>
+
+    </div>
+
+    <script>
+
+        $('#err').html('');
+        $("#form-2").submit(function (event) {
+            var _taikhoan = $('#taikhoan').val();
+            var _matkhau = $('#matkhau').val();
+            if (_tailkhoan == 'bao' && _matkhau == '123') {
+                var user = { tailkhoan: _taikhoan, matkhau: _matkhau };
+                localStorage.setItem('user', JSON.stringify(user));
+                window.location.href = "main.html";
+            } else {
+                $('#err').html('Thông tin tài khoản hoặc mật khẩu không đúng');
+            }
+            event.preventDefault();
+        });
+        // Mong muốn của chúng ta
+       // Validator({
+          //  form: '#form-1',
+        //    rules: [
+         //       Validator.isEmail('#email')
+               
+                
+        //   ]
+     //   })
+
+    </script>
+</body>
+
+</html>

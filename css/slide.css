@@ -1,0 +1,54 @@
+
+.slide{
+    position: relative;
+    width: 1000px;
+    overflow: hidden;   
+    padding-bottom: 20px;
+}
+/* .chuyen-slide{
+    width: 9999px;
+    
+} */
+
+.dieuhuong{
+    position: absolute;
+    top: 45%;
+    font-size: 30px;
+    color: white;
+    margin-left: 17px;
+}
+.dieuhuong i:last-child{
+    position: relative;
+    left: 752px;
+}
+.dieuhuong i:hover{
+    cursor: pointer;
+}
+
+
+.slide img{
+    width: 854px;
+    height: 450px;
+    border-radius: 5px; 
+}
+
+/*********************************/
+/* .slidershow{
+    width: 854px;
+    height: 400px;
+    overflow: hidden;
+    transform: translate(-50%,-50%); 
+   
+} */
+
+/* .navigation{
+    position: absolute;
+    bottom:10px;
+    left: 50%;
+    transform: translateX(-50%);
+} */
+
+/* .bar{
+    width: 20px;
+    height: 20px;
+} */
